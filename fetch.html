@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance JS</title>
+</head>
+<body>
+    <script>
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response)=>response.json())
+        .then(data=>{
+            for(var x in data)
+            {
+              document.write(data[x].name);  
+            }
+        })
+        .catch((error)=>document.write("can't fetch data"));
+        
+    </script>
+</body>
+</html>
